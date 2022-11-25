@@ -1,13 +1,25 @@
 <div class="container">
-  <div class="house-image">
-    <img src="{{featured_photo}}" alt=""/>
-    <p>❤</p>
-  </div>
-  <div class="house-info">
-    <h4>{{city}}, {{country}}</h4>
-    <span>★ {{rating}}</span>
-    <p class="date">1-6 nov</p>
-    <p class="price">648€</p>
+  <div class="house">
+    <div class="house-image">
+      <img src="{{featured_photo}}" alt=""/>
+      <div class="icon-favorite">
+        <fa-icon [icon]="faHeart"></fa-icon>
+      </div>
+    </div>
+    <div class="house-info">
+      <div class="house-location-rating">
+        <div>
+          <h4>{{city}}, {{country}}</h4>
+        </div>
+        <div>
+          <span>★ {{rating}}</span>
+        </div>
+      </div>
+      <div class="house-dates-price">
+        <p class="date">1-6 nov</p>
+        <p class="price">648€</p>
+      </div>
+    </div>
   </div>
 </div>
 

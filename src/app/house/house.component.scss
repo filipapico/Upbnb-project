@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px;
+
+  .house {
+    background-color: lightgrey;
+
+    .house-image {
+      position: relative;
+    }
+
+    img {
+      display: block;
+      width: 300px;
+      border-radius: 12px;
+    }
+
+    fa-icon {
+      color: white;
+    }
+
+    .icon-favorite {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      cursor: pointer;
+    }
+
+    .house-location-rating {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 40px;
+    }
+
+    .house-dates-price {
+      p {
+        margin-top: 6px;
+        margin-bottom: 6px;
+
+        &.date {
+          color: grey;
+        }
+      }
+    }
+  }
+}
