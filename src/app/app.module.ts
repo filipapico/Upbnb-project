@@ -10,6 +10,8 @@ import { DetailsComponent } from './details/details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HouseComponent } from './house/house.component';
 import { TesteComponent } from './teste/teste.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { TesteComponent } from './teste/teste.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
