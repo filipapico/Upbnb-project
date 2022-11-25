@@ -1,0 +1,45 @@
+.container {
+  margin: 12px;
+
+  .details-image {
+    position: relative;
+
+    img {
+      display: block;
+      border-radius: 12px;
+    }
+
+    fa-icon {
+      color: white;
+    }
+
+    .icon-favorite {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      cursor: pointer;
+    }
+  }
+
+  p{
+    line-height: 1.8;
+  }
+
+  .details-price {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    h2 {
+      margin: 12px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+}
