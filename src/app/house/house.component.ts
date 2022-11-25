@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {UpbnbService} from "../upbnb.service";
 
 @Component({
@@ -7,17 +7,17 @@ import {UpbnbService} from "../upbnb.service";
   styleUrls: ['./house.component.scss']
 })
 export class HouseComponent implements OnInit {
-  houses: House[] = [];
+
+  @Input() featured_photo! : string
+  @Input() city! : string
+  @Input() country! : string
+  @Input() rating! : number
 
   constructor(private upbnb: UpbnbService) {
   }
 
   ngOnInit(): void {
-    this.upbnb.getHouses().subscribe((houses: Houses) => {
-      this.houses = <House[]>houses.data;
-    })
-  }
 
-  //DUVIDA - por que razão não dá para usar o interface Houses
+  }
 
 }

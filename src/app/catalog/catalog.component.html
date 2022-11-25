@@ -1,1 +1,10 @@
-<p>catalog works!</p>
+<div>
+
+  <app-house *ngFor="let h of houses"
+             [featured_photo]="h.featured_photo"
+             [city]="h.city"
+             [country]="h.country"
+             [rating]="h.rating"
+  >
+  </app-house>
+</div>
