@@ -1,10 +1,12 @@
-<div>
-
-  <app-house *ngFor="let h of houses"
-             [featured_photo]="h.featured_photo"
-             [city]="h.city"
-             [country]="h.country"
-             [rating]="h.rating"
-  >
-  </app-house>
+<div class="container">
+  <div class="catalog-search">SEARCH BAR</div>
+  <div class="catalog-houses">
+    <app-house *ngFor="let h of houses"
+               [featured_photo]="h.featured_photo"
+               [city]="h.city"
+               [country]="h.country"
+               [rating]="h.rating"
+    >
+    </app-house>
+  </div>
 </div>
