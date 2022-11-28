@@ -1,34 +1,42 @@
-<div class="container">
+<div class="container" *ngIf="details">
 
-  <h1>Hacienda Bodeguera</h1>
-  <h2> ★ 4,3 · Ronda, Espanha</h2>
+  <h1>{{details.title}}</h1>
+  <h2> ★ {{details.rating}} · {{details.city}}, {{details.country}}</h2>
 
-  <div class="details-image">
-    <img src="https://m9-frontend.upskill.appx.pt/upbnb/photos/houses/photo_1.jpg" alt="IMAGE HERE">
+  <div class="details.featured_photo">
+    <img src="{{details.featured_photo}}" alt="{{details.featured_photo}}">
     <div class="icon-favorite">
       <fa-icon [icon]="faHeart" class="fa-2x"></fa-icon>
     </div>
   </div>
 
   <div class="details-price">
-    <h2>752€</h2>
+    <h2>€{{details.price}}</h2>
     <p>noite</p>
   </div>
 
   <p>
-    Hacienda Bodeguera merges Spain’s historic past and stylish present within its four en-suite bedrooms, gated estate.
-    Spanish colonial architecture is represented by ancient stone walls, exposed wood beams, a clay-tiled roof, and the
-    villa’s numerous openings to the beautiful outdoors. On the modern side, Bodeguera uses clean lines, minimalistic
-    decor, and an open concept floor plan to create a space that is both elegant and calming. Outside, Bodeguera is
-    decorated with mature trees, lush greenery, and dynamic views of the distant mountains and valley below.
+    {{details.description}}
   </p>
 
   <div>
     <p>FEATURES MISSING</p>
   </div>
 
-  <div>
+  <div *ngIf="host">
     <h3>Sobre o anfitrião</h3>
+    <div>
+      <div>
+        <img src="{{host.photo}}" alt="host.photo">
+        <div>
+          <h3>{{host.name}}</h3>
+          <span>★ {{host.rating}}</span>
+        </div>
+      </div>
+    </div>
+    <p>
+       </p>
+
   </div>
 
   <div>

@@ -1,4 +1,8 @@
 import {Component} from '@angular/core';
+import {UpbnbService} from "../upbnb.service";
+import {ActivatedRoute} from "@angular/router";
+import {Host, House} from "../interfaces";
+
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {faHeart as faHeartSolid} from "@fortawesome/free-solid-svg-icons";
 
@@ -11,5 +15,26 @@ export class DetailsComponent {
   faHeart = faHeart;
   faHeartSolid = faHeartSolid;
 
+  details?: House
+  id: number
+  host?: Host
 
+  constructor(public route: ActivatedRoute, public upbnbService: UpbnbService) {
+    this.id = route.snapshot.params['id_casa']
+  }
+
+  ngOnInit(): void {
+    this.upbnbService.getDetails(this.id).subscribe((details: House) => {
+      this.details = <House>details;
+      console.log("details",this.details)
+    })
+
+    this.upbnbService.getHost(this.id).subscribe((host) => {
+      this.host = <Host>host;
+      console.log("host",this.host)
+    })
+
+    // GET OTHER INFO HERE
+
+  }
 }
