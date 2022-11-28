@@ -17,6 +17,9 @@ export class HouseComponent implements OnInit {
   @Input() city!: string
   @Input() country!: string
   @Input() rating!: number
+  @Input() price!: number
+  @Input() host_type!: string
+
 
   constructor(private upbnb: UpbnbService) {
   }

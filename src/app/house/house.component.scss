@@ -42,7 +42,8 @@
         margin-top: 6px;
         margin-bottom: 6px;
 
-        &.date {
+        .host {
+          background-color: red;
           color: grey;
         }
       }
