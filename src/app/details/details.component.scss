@@ -1,7 +1,7 @@
 .container {
   margin: 12px;
 
-  .details-image {
+  .details-featured_photo {
     position: relative;
 
     img {
@@ -24,7 +24,7 @@
     }
   }
 
-  p{
+  p {
     line-height: 1.8;
   }
 
@@ -40,6 +40,29 @@
     p {
       font-size: 22px;
     }
+  }
+
+  //HOST
+
+  .details-host-info {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      margin-right: 20px;
+    }
+
+    .details-host-name-rating h4{
+      line-height: 1px;
+    }
+
+  }
+
+  p{
+    line-height: 1.8;
   }
 
 }

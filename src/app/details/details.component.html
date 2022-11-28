@@ -3,7 +3,7 @@
   <h1>{{details.title}}</h1>
   <h2> ★ {{details.rating}} · {{details.city}}, {{details.country}}</h2>
 
-  <div class="details.featured_photo">
+  <div class="details-featured_photo">
     <img src="{{details.featured_photo}}" alt="{{details.featured_photo}}">
     <div class="icon-favorite">
       <fa-icon [icon]="faHeart" class="fa-2x"></fa-icon>
@@ -26,21 +26,21 @@
   <div *ngIf="host">
     <h3>Sobre o anfitrião</h3>
     <div>
-      <div>
+      <div class="details-host-info">
         <img src="{{host.photo}}" alt="host.photo">
-        <div>
-          <h3>{{host.name}}</h3>
+        <div class="details-host-name-rating">
+          <h4>{{host.name}}</h4>
           <span>★ {{host.rating}}</span>
         </div>
       </div>
+      <p>No mundo atual, a execução dos pontos do programa desafia a capacidade de equalização do investimento em
+        reciclagem técnica.</p>
     </div>
-    <p>
-       </p>
-
   </div>
 
   <div>
     <h3>Galeria</h3>
+
   </div>
 
   <div>
