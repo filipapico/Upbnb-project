@@ -25,5 +25,12 @@ interface Host{
   rating: number
 }
 
+interface Photos{
+  photos: Photo[]
+}
 
-export {Host, House, Houses}
+interface Photo {
+  photo: string
+}
+
+export {Host, House, Houses, Photos, Photo}
