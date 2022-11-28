@@ -38,8 +38,18 @@
     </div>
   </div>
 
-  <div>
+  <div *ngIf="photos">
     <h3>Galeria</h3>
+
+    <!--<div *ngFor="let p of photos"
+    {{photos.p}}
+    ></div>-->
+
+    <p>"{{photos[0]}}"</p>
+    <p>"{{photos[1]}}"</p>
+    <p>"{{photos[2]}}"</p>
+    <p>"{{photos[3]}}"</p>
+    <p>"{{photos[4]}}"</p>
 
   </div>
 
