@@ -33,4 +33,15 @@ interface Photo {
   photo: string
 }
 
-export {Host, House, Houses, Photos, Photo}
+interface Reviews{
+  reviews: Review[]
+}
+
+interface Review{
+  name: string
+  photo: string
+  date: string
+  comment: string
+}
+
+export {Host, House, Houses, Photos, Photo, Reviews, Review}
