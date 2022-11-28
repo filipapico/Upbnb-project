@@ -1,6 +1,7 @@
 <div class="container">
   <div class="house">
-    <div class="house-image">
+
+    <div class="house-image" [routerLink]="['/details', id]">
       <img src="{{featured_photo}}" alt=""/>
       <div class="icon-favorite">
         <fa-icon [icon]="faHeart"></fa-icon>
@@ -17,7 +18,7 @@
       </div>
       <div class="house-dates-price">
         <p class="host">{{host_type}}</p>
-        <p class="date">DATES</p>
+        <p class="date">RESERVATION DATES MISSING</p>
         <p class="price">{{price}}€</p>
       </div>
     </div>
