@@ -55,14 +55,23 @@
       margin-right: 20px;
     }
 
-    .details-host-name-rating h4{
+    .details-host-name-rating h4 {
       line-height: 1px;
     }
 
   }
 
-  p{
+  p {
     line-height: 1.8;
+  }
+
+  .details-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      width: 45%;
+    }
   }
 
 }
