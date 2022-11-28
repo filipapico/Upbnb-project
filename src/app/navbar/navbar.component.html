@@ -1,12 +1,18 @@
 <div class="container">
   <div class="search-icon">
-    <fa-icon [icon]="faSearch" class="fa-3x"></fa-icon>
+    <a routerLink="catalog">
+      <fa-icon [icon]="faSearch" class="fa-3x"></fa-icon>
+    </a>
   </div>
   <div class="house-icon">
-    <fa-icon [icon]="faHouse" class="fa-4x"></fa-icon>
+    <a routerLink="home">
+      <fa-icon [icon]="faHouse" class="fa-4x"></fa-icon>
+    </a>
   </div>
   <div class="heart-icon">
-    <fa-icon [icon]="faHeart" class="fa-3x"></fa-icon>
+    <a routerLink="favorites">
+      <fa-icon [icon]="faHeart" class="fa-3x"></fa-icon>
+    </a>
   </div>
 </div>
 
