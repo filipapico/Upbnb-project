@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UpbnbService} from "../upbnb.service";
+import {House} from "../interfaces";
 
 @Component({
   selector: 'app-catalog',
@@ -9,11 +10,11 @@ import {UpbnbService} from "../upbnb.service";
 export class CatalogComponent implements OnInit {
   houses: House[] = [];
 
-  constructor(private upbnb: UpbnbService) {
+  constructor(private upbnbService: UpbnbService) {
   }
 
   ngOnInit(): void {
-    this.upbnb.getHouses().subscribe((houses: Houses) => {
+    this.upbnbService.getHouses().subscribe((houses) => {
       this.houses = <House[]>houses.data;
     })
   }
