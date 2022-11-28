@@ -10,7 +10,6 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./house.component.scss']
 })
 export class HouseComponent implements OnInit {
-
   faHeart = faHeart;
   faHeartSolid = faHeartSolid;
 
@@ -20,12 +19,10 @@ export class HouseComponent implements OnInit {
   @Input() rating!: number
   @Input() price!: number
   @Input() host_type!: string
-  private id_casa: any;
-  id: any;
-
+  @Input() id!: number
 
   constructor(private upbnb: UpbnbService, private route: ActivatedRoute) {
-    this.id_casa = route.snapshot.params['id_casa'];
+    this.id = route.snapshot.params['id_casa'];
   }
 
   ngOnInit(): void {
