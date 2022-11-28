@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Host, House, Houses, Photos, Photo, Reviews, Review} from "./interfaces";
+import {Host, House, Houses, Photos, Reviews, Review} from "./interfaces";
 
 const SOURCE_URL = "https://m9-frontend.upskill.appx.pt/upbnb";
 

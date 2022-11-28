@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {UpbnbService} from "../upbnb.service";
 import {ActivatedRoute} from "@angular/router";
-import {Host, House, Photo, Photos} from "../interfaces";
+import {Host, House, Photos} from "../interfaces";
 
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {faHeart as faHeartSolid} from "@fortawesome/free-solid-svg-icons";
@@ -18,7 +18,7 @@ export class DetailsComponent {
   details?: House
   id: number
   host?: Host
-  photos?: Photo[] = []
+  photos?: string[]
 
   constructor(public route: ActivatedRoute, public upbnbService: UpbnbService) {
     this.id = route.snapshot.params['id_casa']
@@ -36,7 +36,7 @@ export class DetailsComponent {
     })
 
     this.upbnbService.getPhotos(this.id).subscribe((photos: Photos) => {
-      this.photos = <Photo[]>photos.photos
+      this.photos = photos.photos;
       console.log("photos 0",this.photos)
     })
 

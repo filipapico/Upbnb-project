@@ -26,11 +26,7 @@ interface Host{
 }
 
 interface Photos{
-  photos: Photo[]
-}
-
-interface Photo {
-  photo: string
+  photos: string[]
 }
 
 interface Reviews{
@@ -44,4 +40,4 @@ interface Review{
   comment: string
 }
 
-export {Host, House, Houses, Photos, Photo, Reviews, Review}
+export {Host, House, Houses, Photos, Reviews, Review}
