@@ -15,5 +15,15 @@ interface House {
   price: number
   host_type: string
   featured_photo: string
+  description: string
 }
 
+interface Host{
+  name: string
+  photo: string
+  type: string
+  rating: number
+}
+
+
+export {Host, House, Houses}
