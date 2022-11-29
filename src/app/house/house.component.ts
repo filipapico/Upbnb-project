@@ -18,8 +18,15 @@ export class HouseComponent implements OnInit {
   @Input() country!: string
   @Input() rating!: number
   @Input() price!: number
-  @Input() host_type!: string
+  @Input() host_type?: string //? because this may exist or not, depending on the component House will be used in...
   @Input() id!: number
+  @Input() data? : number //? idem
+
+  host_types : any = {
+    professional: "Anfitrião profissional",
+    individual: "Anfitrião individual"
+  }
+  // This object allows to "convert" a variable to a string
 
   constructor(private upbnb: UpbnbService, private route: ActivatedRoute) {
     this.id = route.snapshot.params['id_casa'];

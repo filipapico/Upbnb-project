@@ -17,8 +17,9 @@
         </div>
       </div>
       <div class="house-dates-price">
-        <p class="host">{{host_type}}</p>
-        <p class="date">RESERVATION DATES MISSING</p>
+        <p class="host" *ngIf="host_type">{{host_types[host_type]}}</p>
+        <!--        -->
+        <p class="date" *ngIf="data">{{data}}</p>
         <p class="price">{{price}}€</p>
       </div>
     </div>
