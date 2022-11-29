@@ -18,26 +18,25 @@ interface House {
   description: string
 }
 
-interface Host{
+
+interface Host {
   name: string
   photo: string
   type: string
   rating: number
 }
 
-interface Photos{
+interface Photos {
   photos: string[]
 }
 
-interface Reviews{
-  reviews: Review[]
+interface Reviews {
+  reviews: [
+    { name: string
+      photo: string
+      date: string
+      comment: string
+    }]
 }
 
-interface Review{
-  name: string
-  photo: string
-  date: string
-  comment: string
-}
-
-export {Host, House, Houses, Photos, Reviews, Review}
+export {House, Houses, Host, Photos, Reviews}

@@ -70,7 +70,12 @@
     flex-wrap: wrap;
 
     div {
-      width: 45%;
+      width: 40%;
+
+      img{
+        border-radius: 12px;
+        padding: 6px;
+      }
     }
   }
 
