@@ -4,9 +4,7 @@ import {ActivatedRoute} from "@angular/router";
 import {House, Features, Host, Photos, Reviews} from "../interfaces";
 
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
-import {faHeart as faHeartSolid} from "@fortawesome/free-solid-svg-icons";
-import {faAirFreshener} from "@fortawesome/free-solid-svg-icons";
-import {faDog} from "@fortawesome/free-solid-svg-icons";
+import {faFire, faHeart as faHeartSolid, faSmoking, faTv, faWifi, faDog} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-details',
@@ -16,16 +14,30 @@ import {faDog} from "@fortawesome/free-solid-svg-icons";
 export class DetailsComponent {
   faHeart = faHeart;
   faHeartSolid = faHeartSolid;
-  faAirFreshener = faAirFreshener;
+  faDog = faDog;
+  faWifi = faWifi;
+  faTv = faTv;
+  faSmoking = faSmoking;
+  faFire = faFire;
 
-  details?: House
-  id: number
-  host!: Host
-  photos!: string[]
-  reviews!: Reviews
-  features!: string[]
-  allfeatures: string[] = ["petsAllowed","washingMachine","airConditioner","tv", "smokingAllowed","fireplace","wifi","microwave"]
+  details?: House;
+  id: number;
+  host!: Host;
+  photos!: string[];
+  reviews!: Reviews;
+  features!: string[];
 
+  allfeatures?: any = {
+    petsAllowed: faDog,
+    wifi: faWifi,
+    tv: faTv,
+    smokingAllowed: faSmoking,
+    fireplace: faFire,
+  }
+
+  //washingMachine:
+  //airConditioner:
+  //microwave:
   //"petsAllowed","washingMachine","airConditioner","tv", "smokingAllowed","fireplace","wifi","microwave"
 
 
@@ -54,9 +66,10 @@ export class DetailsComponent {
       this.reviews = reviews;
     })
 
-    this.upbnbService.getFeatures(this.id).subscribe((features)=> {
-      this.features=features.features
-      console.log("features",this.features)
-      })
+    this.upbnbService.getFeatures(this.id).subscribe((features) => {
+      this.features = features.features
+      console.log("features", this.features)
+      console.log("all features", this.allfeatures)
+    })
   }
 }

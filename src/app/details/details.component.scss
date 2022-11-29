@@ -42,6 +42,21 @@
     }
   }
 
+  // FEATURES
+  .details-features{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    fa-icon{
+      color: white;
+      padding: 10px;
+      margin: 2px;
+      background-color: #004F63;
+      border-radius: 12px;
+    }
+  }
+
   //HOST
 
   .details-host-info {
@@ -69,7 +84,7 @@
     div {
       width: 40%;
 
-      img{
+      img {
         border-radius: 12px;
         padding: 6px;
       }
@@ -92,7 +107,7 @@
       margin-bottom: 12px;
     }
 
-    span{
+    span {
       color: grey;
     }
 

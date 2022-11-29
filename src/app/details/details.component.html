@@ -20,33 +20,11 @@
   </p>
 
   <!--FEATURES-->
-  <!--<div>
-
-    <div *ngIf="features">
-
-      <div *ngFor="let f of features">
-
-        {{f}}
-        &lt;!&ndash;        <fa-icon [icon]="{{f}}" class="fa-2x"></fa-icon>&ndash;&gt;
-
-
-        {{allfeatures.includes(f)}}
-
-        <div *ngIf="features.includes(f)">
-
-        </div>
-
-        &lt;!&ndash;<div *ngIf="{{allfeatures.includes(f)}}">
-          lala
-        </div>&ndash;&gt;
-
-      </div>
-
-      &lt;!&ndash;    <fa-icon [icon]="faAirFreshener" class="fa-2x"></fa-icon>&ndash;&gt;
-
+  <div *ngIf="features" class="details-features">
+    <div *ngFor="let f of features">
+      <fa-icon [icon]="allfeatures[f]" class="fa-xl"></fa-icon>
     </div>
-
-  </div>-->
+  </div>
 
   <!--HOST-->
 
