@@ -57,12 +57,9 @@
 
     .details-host-name-rating h4 {
       line-height: 1px;
+      margin-bottom: 12px
     }
 
-  }
-
-  p {
-    line-height: 1.8;
   }
 
   .details-gallery {
@@ -77,6 +74,28 @@
         padding: 6px;
       }
     }
+  }
+
+  .details-reviews {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      margin-right: 20px;
+    }
+
+    .details-reviews-name-date h4 {
+      line-height: 1px;
+      margin-bottom: 12px;
+    }
+
+    span{
+      color: grey;
+    }
+
   }
 
 }

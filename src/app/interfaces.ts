@@ -18,6 +18,9 @@ interface House {
   description: string
 }
 
+interface Features{
+  features: string[]
+}
 
 interface Host {
   name: string
@@ -39,4 +42,4 @@ interface Reviews {
     }]
 }
 
-export {House, Houses, Host, Photos, Reviews}
+export {House, Houses, Features, Host, Photos, Reviews}

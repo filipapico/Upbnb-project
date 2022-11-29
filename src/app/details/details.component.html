@@ -19,9 +19,36 @@
     {{details.description}}
   </p>
 
-  <div>
-    <p>FEATURES MISSING</p>
-  </div>
+  <!--FEATURES-->
+  <!--<div>
+
+    <div *ngIf="features">
+
+      <div *ngFor="let f of features">
+
+        {{f}}
+        &lt;!&ndash;        <fa-icon [icon]="{{f}}" class="fa-2x"></fa-icon>&ndash;&gt;
+
+
+        {{allfeatures.includes(f)}}
+
+        <div *ngIf="features.includes(f)">
+
+        </div>
+
+        &lt;!&ndash;<div *ngIf="{{allfeatures.includes(f)}}">
+          lala
+        </div>&ndash;&gt;
+
+      </div>
+
+      &lt;!&ndash;    <fa-icon [icon]="faAirFreshener" class="fa-2x"></fa-icon>&ndash;&gt;
+
+    </div>
+
+  </div>-->
+
+  <!--HOST-->
 
   <div *ngIf="host">
     <h3>Sobre o anfitrião</h3>
@@ -33,23 +60,38 @@
           <span>★ {{host.rating}}</span>
         </div>
       </div>
-      <p>No mundo atual, a execução dos pontos do programa desafia a capacidade de equalização do investimento em
-        reciclagem técnica.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
     </div>
   </div>
+
+  <!--GALLERY-->
 
   <div *ngIf="photos">
     <h3>Galeria</h3>
     <div class="details-gallery">
       <div *ngFor="let p of photos">
-        <img src="{{p}}" alt="{{p}}">
+        <img src="{{p}}" alt="photo">
       </div>
     </div>
 
   </div>
 
-  <div>
+  <!--REVIEWS-->
+
+  <div *ngIf="reviews">
     <h3>Comentários</h3>
+    <div *ngFor="let r of reviews.reviews">
+      <div class="details-reviews">
+        <img src="{{r.photo}}" alt="photo">
+        <div class="details-reviews-name-date">
+          <h4>{{r.name}}</h4>
+          <span>{{r.date}}</span>
+        </div>
+      </div>
+      <p>{{r.comment}}</p>
+
+    </div>
   </div>
 
 </div>
