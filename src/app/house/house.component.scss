@@ -1,46 +1,45 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
   margin: 12px;
 
   .house {
-    background-color: lightgrey;
 
     .house-image {
       position: relative;
 
       div {
+        display: block;
         background-size: cover;
         width: 100%;
         padding-bottom: 57%;
+        border-radius: 12px;
+      }
+
+      .icon-favorite {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        cursor: pointer;
+
+        fa-icon {
+          color: white;
+        }
       }
     }
 
-    img {
+    /*img {
       display: block;
       width: 300px;
       border-radius: 12px;
-    }
-
-    fa-icon {
-      color: white;
-    }
-
-    .icon-favorite {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 6px;
-      right: 6px;
-      cursor: pointer;
-    }
+    }*/
 
     .house-location-rating {
       display: flex;
       align-items: center;
       justify-content: space-around;
       height: 40px;
+
     }
 
     .house-dates-price {
@@ -52,6 +51,10 @@
           background-color: red;
           color: grey;
         }
+      }
+
+      .price{
+        font-weight: bold;
       }
     }
   }

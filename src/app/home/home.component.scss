@@ -1,16 +1,33 @@
-.container{
+.container {
   padding: 20px;
+  margin: 12px 12px 36px 12px;
 
-  .home-intro h2{
-    color: grey;
+
+  .home-intro {
+    h1 {
+      margin-bottom: 2px;
+    }
+
+    h2 {
+      color: grey;
+      margin-top: 2px;
+      font-weight: normal;
+    }
   }
 
-  .home-reservations{
-    padding-top: 12px;
+  .home-reservations h2 {
+    font-weight: normal;
   }
 
-  .home-houses-reservations, .home-houses-past-reservations{
+  .home-houses-reservations, .home-houses-past-reservations {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    app-house {
+      width: 45%;
+    }
+
   }
 
 }

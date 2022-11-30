@@ -1,9 +1,19 @@
 .container {
   padding: 20px;
+  margin: 12px 12px 36px 12px;
 
   .catalog-search {
     margin: 20px;
   }
 
-}
+  .catalog-houses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
+    app-house {
+      width: 45%;
+    }
+  }
+
+}
