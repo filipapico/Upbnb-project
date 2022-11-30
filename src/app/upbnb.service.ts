@@ -19,6 +19,10 @@ export class UpbnbService {
     return this.http.get<Reservations>(SOURCE_URL + "/casas/current");
   }
 
+  getPastReservations(){
+    return this.http.get<Reservations>(SOURCE_URL + "/casas/past");
+  }
+
   getDetails(id: number) {
     return this.http.get<House>(SOURCE_URL + "/casas/" + id);
   }

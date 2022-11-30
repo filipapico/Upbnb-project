@@ -20,7 +20,17 @@
     </div>
     <h2>Reservas passadas</h2>
     <div class="home-houses-past-reservations">
-      <app-house></app-house>
+      <app-house *ngFor="let r of pastReservations.data"
+                 [id]="r.id"
+                 [title]="r.title"
+                 [country]="r.country"
+                 [city]="r.city"
+                 [rating]="r.rating"
+                 [price]="r.price"
+                 [time]="r.time"
+                 [featured_photo]="r.featured_photo"
+      >
+      </app-house>
     </div>
   </div>
 </div>

@@ -10,6 +10,7 @@ import {Reservations} from "../interfaces";
 
 export class HomeComponent implements OnInit {
   reservations!: Reservations
+  pastReservations!: Reservations
 
   constructor(private upbnbService: UpbnbService) {
   }
@@ -18,6 +19,11 @@ export class HomeComponent implements OnInit {
     this.upbnbService.getCurrentReservations().subscribe((reservations) => {
       this.reservations = reservations
       //console.log(this.reservations)
+    })
+
+    this.upbnbService.getPastReservations().subscribe((pastReservations:Reservations)=> {
+      this.pastReservations = pastReservations
+      console.log("past",this.pastReservations)
     })
 
   }
