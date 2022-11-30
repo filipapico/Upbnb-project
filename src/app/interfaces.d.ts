@@ -18,7 +18,23 @@ interface House {
   description: string
 }
 
-interface Features{
+export interface Reservations {
+  total: number
+  data: Reservation[]
+}
+
+interface Reservation {
+  id: number
+  title: string
+  country: string
+  city: string
+  rating: number
+  price: number
+  time: string
+  featured_photo: string
+}
+
+interface Features {
   features: string[]
 }
 
@@ -35,11 +51,10 @@ interface Photos {
 
 interface Reviews {
   reviews: [
-    { name: string
+    {
+      name: string
       photo: string
       date: string
       comment: string
     }]
 }
-
-export {House, Houses, Features, Host, Photos, Reviews}
