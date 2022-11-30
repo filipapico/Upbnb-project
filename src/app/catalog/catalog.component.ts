@@ -10,6 +10,7 @@ import {House} from "../interfaces";
 
 export class CatalogComponent implements OnInit {
   houses: House[] = [];
+  searchHouses: House[] = [];
 
   constructor(private upbnbService: UpbnbService) {
   }
@@ -18,5 +19,16 @@ export class CatalogComponent implements OnInit {
     this.upbnbService.getHouses().subscribe((houses) => {
       this.houses = <House[]>houses.data;
     })
+
   }
+
+  changeValue(e: any) {
+    const value = e.target.value;
+
+    this.upbnbService.getSearchHouses(value).subscribe((searchHouses)=>{
+      this.houses = <House[]>searchHouses.data;
+    })
+
+  }
+
 }

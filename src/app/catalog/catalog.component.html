@@ -1,6 +1,6 @@
 <div class="container">
   <div class="catalog-search">
-    <input type="text">
+    <input type="text" class="search" (change)="changeValue($event)" name="search" placeholder="Procurar 🔍" autofocus>
   </div>
   <div class="catalog-houses">
     <app-house *ngFor="let h of houses"
