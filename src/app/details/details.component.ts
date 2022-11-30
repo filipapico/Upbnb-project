@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {UpbnbService} from "../upbnb.service";
 import {ActivatedRoute} from "@angular/router";
-import {House, Features, Host, Photos, Reviews} from "../interfaces";
+import {House, Host, Photos, Reviews} from "../interfaces";
 
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {faFire, faHeart as faHeartSolid, faSmoking, faTv, faWifi, faDog} from "@fortawesome/free-solid-svg-icons";
