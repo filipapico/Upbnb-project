@@ -4,7 +4,14 @@ import {ActivatedRoute} from "@angular/router";
 import {House, Host, Photos, Reviews} from "../interfaces";
 
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
-import {faFire, faHeart as faHeartSolid, faSmoking, faTv, faWifi, faDog} from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart as faHeartSolid,
+  faSmoking,
+  faTv,
+  faWifi,
+  faDog,
+  faTShirt, faArchway, faFan, faUtensils
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-details',
@@ -18,7 +25,9 @@ export class DetailsComponent {
   faWifi = faWifi;
   faTv = faTv;
   faSmoking = faSmoking;
-  faFire = faFire;
+  faArchway = faArchway;
+  faTShirt = faTShirt;
+  faFan = faFan;
 
   details?: House;
   id: number;
@@ -32,13 +41,13 @@ export class DetailsComponent {
     wifi: faWifi,
     tv: faTv,
     smokingAllowed: faSmoking,
-    fireplace: faFire,
+    fireplace: faArchway,
+    washingMachine: faTShirt,
+    airConditioner: faFan,
+    microwave: faUtensils,
   }
 
-  //washingMachine:
-  //airConditioner:
-  //microwave:
-  //"petsAllowed","washingMachine","airConditioner","tv", "smokingAllowed","fireplace","wifi","microwave"
+  //FEATURES ICONS "petsAllowed","washingMachine","airConditioner","tv", "smokingAllowed","fireplace","wifi","microwave"
 
 
   constructor(public route: ActivatedRoute, public upbnbService: UpbnbService) {
