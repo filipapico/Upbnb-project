@@ -2,6 +2,7 @@
   <div class="house">
 
     <div class="house-image" [routerLink]="['/details', id]">
+<!--<div style="background-image: url('{{featured_photo}}');"></div>-->
       <img src="{{featured_photo}}" alt=""/>
       <div class="icon-favorite">
         <fa-icon [icon]="faHeart"></fa-icon>
@@ -18,7 +19,6 @@
       </div>
       <div class="house-dates-price">
         <p class="host" *ngIf="host_type">{{host_types[host_type]}}</p>
-        <!--        -->
         <p class="date" *ngIf="data">{{data}}</p>
         <p class="price">{{price}}€</p>
       </div>
