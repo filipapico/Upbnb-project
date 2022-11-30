@@ -21,6 +21,7 @@ export class HouseComponent implements OnInit {
   @Input() host_type?: string //? because this may exist or not, depending on the component House will be used in...
   @Input() id!: number
   @Input() data? : number //? idem
+  @Input() time? : string
 
   host_types : any = {
     professional: "Anfitrião profissional",

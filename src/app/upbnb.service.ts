@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {House, Houses, Features, Host, Photos, Reviews} from "./interfaces";
+import {House, Houses, Features, Host, Photos, Reviews, Reservations} from "./interfaces";
 
 const SOURCE_URL = "https://m9-frontend.upskill.appx.pt/upbnb";
 
@@ -13,6 +13,10 @@ export class UpbnbService {
 
   getHouses() {
     return this.http.get<Houses>(SOURCE_URL + "/casas"); //<Houses> está a dizer que a informação que vem do URL tem o formato definido no interface Houses
+  }
+
+  getCurrentReservations(){
+    return this.http.get<Reservations>(SOURCE_URL + "/casas/current");
   }
 
   getDetails(id: number) {
