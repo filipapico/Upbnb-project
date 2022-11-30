@@ -7,6 +7,7 @@ import {House} from "../interfaces";
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.scss']
 })
+
 export class CatalogComponent implements OnInit {
   houses: House[] = [];
 

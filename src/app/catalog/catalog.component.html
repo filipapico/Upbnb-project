@@ -1,5 +1,7 @@
 <div class="container">
-  <div class="catalog-search">SEARCH BAR</div>
+  <div class="catalog-search">
+    <input type="text">
+  </div>
   <div class="catalog-houses">
     <app-house *ngFor="let h of houses"
                [featured_photo]="h.featured_photo"
