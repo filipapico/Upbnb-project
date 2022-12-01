@@ -29,7 +29,7 @@ export class HouseComponent implements OnInit {
   }
   // This object allows to "convert" a variable to a string
 
-  constructor(private upbnb: UpbnbService, private route: ActivatedRoute) {
+  constructor(public upbnbService: UpbnbService, private route: ActivatedRoute) {
     this.id = route.snapshot.params['id_casa'];
   }
 

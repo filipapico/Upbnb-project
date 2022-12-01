@@ -47,4 +47,43 @@ export class UpbnbService {
     return this.http.get<Features>(SOURCE_URL + "/casas/" + id + "/features")
   }
 
+  favorites: number[] = [];
+
+  isFavorite(id:number){
+    return this.favorites.includes(id)
+  }
+
+  toggleFavorite(id:number){
+    if (this.isFavorite(id)){
+      this.favorites.splice(this.favorites.indexOf(id),1)
+    } else {
+      this.favorites.push(id)
+    }
+  }
+
+  getFavorites(){
+    console.log("Aqui estão os favoritos")
+  }
+
+  // favoritos: number[] = [];
+  //
+  // isFavorite(id: number) {
+  //   return this.favoritos.includes(id)
+  // }
+  //
+  // toggleFavorito(id: number) {
+  //   if (this.isFavorite(id)) {
+  //     //remover id dos favoritos
+  //     this.favoritos.splice(this.favoritos.indexOf(id), 1);
+  //   } else {
+  //     //adicionar id aos favoritos
+  //     this.favoritos.push(id);
+  //   }
+  // }
+  //
+  // getFavoritos() {
+  //   console.log("lista dos favoritos", this.favoritos)
+  //   return this.http.get(this.BASE_URL + "/livros?ids=" + this.favoritos.join())
+  // }
+
 }

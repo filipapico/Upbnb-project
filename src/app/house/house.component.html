@@ -3,8 +3,8 @@
     <div class="house-image">
       <div style="background-image: url('{{featured_photo}}');"></div>
       <!--<img src="{{featured_photo}}" alt=""/>-->
-      <div class="icon-favorite">
-        <fa-icon [icon]="faHeart"></fa-icon>
+      <div class="icon-favorite" (click)="upbnbService.toggleFavorite(id)">
+        <fa-icon [icon]="upbnbService.isFavorite(id) ? faHeartSolid : faHeart"></fa-icon>
       </div>
     </div>
     <div class="house-info">

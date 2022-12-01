@@ -16,14 +16,15 @@
 
       .icon-favorite {
         display: flex;
-        align-items: center;
-        position: absolute;
-        top: 6px;
-        left: 6px;
         cursor: pointer;
+        padding-bottom: 0;
 
         fa-icon {
           color: white;
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          padding: 6px;
         }
       }
     }
@@ -53,7 +54,7 @@
         }
       }
 
-      .price{
+      .price {
         font-weight: bold;
       }
     }

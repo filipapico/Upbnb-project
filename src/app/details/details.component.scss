@@ -9,18 +9,18 @@
       border-radius: 12px;
     }
 
-    fa-icon {
-      color: white;
-    }
-
     .icon-favorite {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 6px;
-      right: 8px;
       cursor: pointer;
+
+      fa-icon {
+        color: white;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        padding: 6px;
+      }
+
     }
   }
 
