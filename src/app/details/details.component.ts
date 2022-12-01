@@ -71,14 +71,14 @@ export class DetailsComponent {
     })
 
     this.upbnbService.getReviews(this.id).subscribe((reviews: Reviews) => {
-      console.log("reviews", reviews)
+      //console.log("reviews", reviews)
       this.reviews = reviews;
     })
 
     this.upbnbService.getFeatures(this.id).subscribe((features) => {
       this.features = features.features
-      console.log("features", this.features)
-      console.log("all features", this.allfeatures)
+      //console.log("features", this.features)
+      //console.log("all features", this.allfeatures)
     })
   }
 }

@@ -54,6 +54,7 @@ export class UpbnbService {
   }
 
   toggleFavorite(id:number){
+    console.log("lista favs",this.favorites)
     if (this.isFavorite(id)){
       this.favorites.splice(this.favorites.indexOf(id),1)
     } else {
@@ -64,26 +65,5 @@ export class UpbnbService {
   getFavorites(){
     console.log("Aqui estão os favoritos")
   }
-
-  // favoritos: number[] = [];
-  //
-  // isFavorite(id: number) {
-  //   return this.favoritos.includes(id)
-  // }
-  //
-  // toggleFavorito(id: number) {
-  //   if (this.isFavorite(id)) {
-  //     //remover id dos favoritos
-  //     this.favoritos.splice(this.favoritos.indexOf(id), 1);
-  //   } else {
-  //     //adicionar id aos favoritos
-  //     this.favoritos.push(id);
-  //   }
-  // }
-  //
-  // getFavoritos() {
-  //   console.log("lista dos favoritos", this.favoritos)
-  //   return this.http.get(this.BASE_URL + "/livros?ids=" + this.favoritos.join())
-  // }
 
 }

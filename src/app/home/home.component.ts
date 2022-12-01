@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
     this.upbnbService.getPastReservations().subscribe((pastReservations:Reservations)=> {
       this.pastReservations = pastReservations
-      console.log("past",this.pastReservations)
+      //console.log("past",this.pastReservations)
     })
 
   }

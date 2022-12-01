@@ -4,7 +4,8 @@
   <h2> ★ {{details.rating}} · {{details.city}}, {{details.country}}</h2>
 
   <div class="details-featured_photo">
-    <img src="{{details.featured_photo}}" alt="{{details.featured_photo}}">
+    <div style="background-image: url('{{details.featured_photo}}');"></div>
+    <!--<img src="{{details.featured_photo}}" alt="{{details.featured_photo}}">-->
     <div class="icon-favorite" (click)="upbnbService.toggleFavorite(id)">
       <fa-icon [icon]="upbnbService.isFavorite(id) ? faHeartSolid : faHeart" class="fa-2x"></fa-icon>
     </div>
