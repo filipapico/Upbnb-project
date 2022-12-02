@@ -63,7 +63,8 @@ export class UpbnbService {
   }
 
   getFavorites(){
-    console.log("Aqui estão os favoritos")
+    return this.http.get<Houses>(SOURCE_URL + "/casas?ids=" + this.favorites.join())
+    console.log("Aqui estão os favoritos",this.favorites)
   }
 
 }
