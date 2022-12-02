@@ -18,22 +18,18 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(): void {
     this.upbnbService.getFavorites().subscribe((favHouses) => {
       this.favorites = favHouses.data;
-      console.log("listOfFavoriteHouses", this.favorites)
+      //console.log("list of favorite houses", this.favorites)
 
       favHouses.data.forEach(house => {
         let country = house.country;
-        console.log(this.favoriteCountries);
+        //console.log("obj fav countries",this.favoriteCountries);
         if (!this.favoriteCountries[country]) {
           this.favoriteCountries[country] = [];
-        } else {
-          this.favoriteCountries[country].push()
+          //console.log("empty list",this.favoriteCountries[country])
         }
+        this.favoriteCountries[country].push(house)
+        console.log("novo",this.favoriteCountries)
       })
-
-
     })
-
-
   }
-
 }
