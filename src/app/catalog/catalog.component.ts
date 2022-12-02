@@ -24,7 +24,6 @@ export class CatalogComponent implements OnInit {
 
   changeValue(e: any) {
     const value = e.target.value;
-
     this.upbnbService.getSearchHouses(value).subscribe((searchHouses)=>{
       this.houses = <House[]>searchHouses.data;
     })
