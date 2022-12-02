@@ -54,7 +54,7 @@ export class UpbnbService {
   }
 
   toggleFavorite(id:number){
-    console.log("lista favs",this.favorites)
+    // console.log("lista favs",this.favorites)
     if (this.isFavorite(id)){
       this.favorites.splice(this.favorites.indexOf(id),1)
     } else {
@@ -63,8 +63,8 @@ export class UpbnbService {
   }
 
   getFavorites(){
+    // console.log("Aqui estão os favoritos",this.favorites)
     return this.http.get<Houses>(SOURCE_URL + "/casas?ids=" + this.favorites.join())
-    console.log("Aqui estão os favoritos",this.favorites)
   }
 
 }

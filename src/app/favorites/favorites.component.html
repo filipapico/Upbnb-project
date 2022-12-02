@@ -14,8 +14,17 @@
     </app-house>
   </div>
   <h2>Portugal</h2>
-  <div>
-    APP-HOUSE
+  <div *ngIf="favorites">
+    <app-house *ngFor="let f of favorites"
+               [featured_photo]="f.featured_photo"
+               [city]="f.city"
+               [country]="f.country"
+               [rating]="f.rating"
+               [price]="f.price"
+               [host_type]="f.host_type"
+               [id]="f.id"
+    >
+    </app-house>
   </div>
 
   <h2>Espanha</h2>
