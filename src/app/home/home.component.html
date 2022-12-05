@@ -5,7 +5,7 @@
   </div>
   <div class="home-reservations">
     <h2>As minhas reservas</h2>
-    <div class="home-houses-reservations">
+    <div *ngIf="reservations" class="home-houses-reservations">
       <app-house *ngFor="let r of reservations.data"
                  [id]="r.id"
                  [title]="r.title"
@@ -19,7 +19,7 @@
       </app-house>
     </div>
     <h2>Reservas passadas</h2>
-    <div class="home-houses-past-reservations">
+    <div *ngIf="pastReservations" class="home-houses-past-reservations">
       <app-house *ngFor="let r of pastReservations.data"
                  [id]="r.id"
                  [title]="r.title"
