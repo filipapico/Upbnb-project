@@ -2,8 +2,26 @@
   padding: 20px;
   margin: 12px 12px 36px 12px;
 
-  .catalog-search {
+  div.catalog-search {
     margin: 20px;
+
+    input{
+      display: block;
+      margin: auto;
+      border-radius: 6px;
+      border: 1px solid lightgrey;
+      width: 95%;
+      height: 40px;
+
+      &.search{
+        font-size: larger;
+      }
+
+      &::placeholder{
+        color: lightgrey;
+      }
+    }
+
   }
 
   .catalog-houses {
