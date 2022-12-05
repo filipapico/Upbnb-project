@@ -20,7 +20,7 @@
     cursor: pointer;
   }
 
-  .search-icon, .heart-icon {
+  div.search-icon, div.heart-icon {
     color: #004F63;
     cursor: pointer;
     width: 100%;
@@ -36,4 +36,13 @@
     color: white;
   }
 
+  div.catalog-blue, div.favorites-blue {
+    background-color: #004F63;
+    color: white;
+  }
+
+  div.catalog-white, div.favorites-white {
+    background-color: white;
+    color: #004F63;
+  }
 }

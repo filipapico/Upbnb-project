@@ -12,4 +12,12 @@ export class NavbarComponent {
   faSearch = faSearch;
   faHouse = faHouse;
   faHeart = faHeart;
+
+  toggle = true;
+  status = "Enable";
+
+  enableDisableColours() {
+    this.toggle = !this.toggle;
+    this.status = this.toggle ? "Enable" : "Disable"
+  }
 }

@@ -1,7 +1,9 @@
 <div class="container">
-  <div class="search-icon">
+  <div class="search-icon" (click)="enableDisableColours()"
+       [ngClass]="{'catalog-blue' : !toggle, 'catalog-white': toggle}">
     <p routerLink="catalog">
       <fa-icon [icon]="faSearch" class="fa-3x"></fa-icon>
+
     </p>
   </div>
   <div class="house-icon">
@@ -9,7 +11,8 @@
       <fa-icon [icon]="faHouse" class="fa-4x"></fa-icon>
     </p>
   </div>
-  <div class="heart-icon">
+  <div class="heart-icon" (click)="enableDisableColours()"
+       [ngClass]="{'favorites-white' : !toggle, 'favorites-blue': toggle}">
     <p routerLink="favorites">
       <fa-icon [icon]="faHeart" class="fa-3x"></fa-icon>
     </p>
