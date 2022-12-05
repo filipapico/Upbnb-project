@@ -32,7 +32,8 @@ export class FavoritesComponent implements OnInit {
         console.log("novo", this.favoriteCountries)
         console.log(Object.keys(this.favoriteCountries))
       })
-      let favoriteCountriesList = Object.keys(this.favoriteCountries)
+      this.favoriteCountriesList = Object.keys(this.favoriteCountries)
     })
+
   }
 }
