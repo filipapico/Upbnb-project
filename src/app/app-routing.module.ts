@@ -6,7 +6,7 @@ import {FavoritesComponent} from "./favorites/favorites.component";
 import {DetailsComponent} from "./details/details.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/catalog', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'catalog', component: CatalogComponent},
   {path: 'favorites', component: FavoritesComponent},
