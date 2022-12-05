@@ -7,7 +7,7 @@
         <fa-icon [icon]="upbnbService.isFavorite(id) ? faHeartSolid : faHeart"></fa-icon>
       </div>
     </div>
-    <div class="house-info">
+    <div>
       <div class="house-location-rating">
         <div>
           <h4>{{city}}, {{country}}</h4>
@@ -16,9 +16,9 @@
           <span>★ {{rating}}</span>
         </div>
       </div>
-      <div class="house-dates-price">
+      <div class="house-host-time-price">
         <p class="host" *ngIf="host_type">{{host_types[host_type]}}</p>
-        <p class="date" *ngIf="time">{{time}}</p>
+        <p class="time" *ngIf="time">{{time}}</p>
         <span class="price">{{price}}€ </span>
         <span>noite</span>
       </div>

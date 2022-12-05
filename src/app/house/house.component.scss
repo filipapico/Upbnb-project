@@ -1,57 +1,61 @@
 .container {
   margin: 12px;
 
-  .house {
+  .house-image {
+    position: relative;
 
-    .house-image {
-      position: relative;
-
-      div {
-        display: block;
-        background-size: cover;
-        width: 100%;
-        padding-bottom: 57%;
-        border-radius: 12px;
-      }
-
-      .icon-favorite {
-        display: flex;
-        cursor: pointer;
-        padding-bottom: 0;
-
-        fa-icon {
-          color: white;
-          position: absolute;
-          top: 2px;
-          right: 2px;
-          padding: 6px;
-        }
-      }
+    div {
+      display: block;
+      background-size: cover;
+      width: 100%;
+      padding-bottom: 57%;
+      border-radius: 12px;
     }
 
-
-
-    .house-location-rating {
+    .icon-favorite {
       display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 40px;
+      cursor: pointer;
+      padding-bottom: 0;
 
+      fa-icon {
+        color: white;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        padding: 6px;
+      }
     }
+  }
 
-    .house-dates-price {
-      p {
-        margin-top: 6px;
-        margin-bottom: 6px;
+  .house-location-rating {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 40px;
 
-        .host {
-          background-color: red;
-          color: grey;
-        }
+    div {
+      width: 50%;
+
+      h4 {
+        font-weight: normal;
       }
 
-      .price {
-        font-weight: bold;
+      span {
+        display: block;
+        font-size: 14px;
+        text-align: right;
+      }
+    }
+  }
+
+
+  .house-host-time-price {
+    p {
+      margin-top: 6px;
+      margin-bottom: 6px;
+
+      &.host, &.time {
+        color: grey;
       }
     }
   }
