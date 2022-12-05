@@ -4,27 +4,36 @@
   border-top: 2px solid #004F63;
   position: sticky;
   bottom: 0;
-  padding: 12px;
   background-color: white;
-
-  .search-icon, .heart-icon {
-    color: #004F63;
-    cursor: pointer;
-  }
 
   .house-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 2px;
+    bottom: -16px;
     color: white;
     background-color: #004F63;
-    border-radius: 60px;
-    width: 120px;
-    height: 120px;
+    border-radius: 65px;
+    width: 130px;
+    height: 130px;
     cursor: pointer;
   }
 
+  .search-icon, .heart-icon {
+    color: #004F63;
+    cursor: pointer;
+    width: 100%;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  div.search-icon:hover, div.heart-icon:hover {
+    background-color: #004F63;
+    transition-duration: 50ms;
+    color: white;
+  }
 
 }
