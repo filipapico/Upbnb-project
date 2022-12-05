@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UpbnbService} from "../upbnb.service";
 import {House} from "../interfaces";
-import {faUtensils} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-favorites',
@@ -21,17 +20,16 @@ export class FavoritesComponent implements OnInit {
       this.favorites = favHouses.data;
       //console.log("list of favorite houses", this.favorites)
 
+      //Create a new object with keys==countries and values==array of favorite house(s) per country
       favHouses.data.forEach(house => {
         let country = house.country;
-        //console.log("obj fav countries",this.favoriteCountries);
         if (!this.favoriteCountries[country]) {
           this.favoriteCountries[country] = [];
-          //console.log("empty list",this.favoriteCountries[country])
         }
         this.favoriteCountries[country].push(house)
-        console.log("novo", this.favoriteCountries)
-        console.log(Object.keys(this.favoriteCountries))
       })
+
+      //Add to this new array one new element/country (house(s) added to favorites)
       this.favoriteCountriesList = Object.keys(this.favoriteCountries)
     })
 
