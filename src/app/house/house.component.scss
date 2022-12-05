@@ -33,12 +33,15 @@
     align-items: center;
     height: 40px;
 
-    div {
-      width: 50%;
+    .house-location {
+      width: 80%;
 
       h4 {
         font-weight: normal;
       }
+    }
+
+    .house-rating{
 
       span {
         display: block;
