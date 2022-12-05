@@ -18,16 +18,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.upbnbService.getCurrentReservations().subscribe((reservations) => {
       this.reservations = reservations
-      //console.log(this.reservations)
     })
 
-    this.upbnbService.getPastReservations().subscribe((pastReservations:Reservations)=> {
+    this.upbnbService.getPastReservations().subscribe((pastReservations) => {
       this.pastReservations = pastReservations
-      //console.log("past",this.pastReservations)
     })
-
   }
-
-
 }
 

@@ -2,7 +2,6 @@
   padding: 20px;
   margin: 12px 12px 36px 12px;
 
-
   .home-intro {
     h1 {
       margin-bottom: 2px;
@@ -22,12 +21,9 @@
   .home-houses-reservations, .home-houses-past-reservations {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 
     app-house {
-      width: 45%;
+      width: 50%;
     }
-
   }
-
 }
