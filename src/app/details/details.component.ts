@@ -47,27 +47,29 @@ export class DetailsComponent {
     microwave: faUtensils,
   }
 
-  //FEATURES ICONS "petsAllowed","washingMachine","airConditioner","tv", "smokingAllowed","fireplace","wifi","microwave"
-
-
   constructor(public route: ActivatedRoute, public upbnbService: UpbnbService) {
     this.id = route.snapshot.params['id_casa']
   }
 
   ngOnInit(): void {
+
     this.upbnbService.getDetails(this.id).subscribe((details: House) => {
       this.details = <House>details;
       //console.log("details", this.details)
     })
 
-    this.upbnbService.getHost(this.id).subscribe((host) => {
-      this.host = <Host>host;
-      //console.log("host", this.host)
+    this.upbnbService.getFeatures(this.id).subscribe((features) => {
+      this.features = features.features
+      console.log("features", this.features)
+      console.log("all features", this.allfeatures)
     })
 
-    this.upbnbService.getPhotos(this.id).subscribe((photos: Photos) => {
+    this.upbnbService.getHost(this.id).subscribe((host) => {
+      this.host = <Host>host;
+    })
+
+    this.upbnbService.getPhotos(this.id-1).subscribe((photos: Photos) => {
       this.photos = photos.photos;
-      //console.log("photos 0", this.photos)
     })
 
     this.upbnbService.getReviews(this.id).subscribe((reviews: Reviews) => {
@@ -75,10 +77,5 @@ export class DetailsComponent {
       this.reviews = reviews;
     })
 
-    this.upbnbService.getFeatures(this.id).subscribe((features) => {
-      this.features = features.features
-      //console.log("features", this.features)
-      //console.log("all features", this.allfeatures)
-    })
   }
 }
