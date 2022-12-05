@@ -11,6 +11,7 @@ import {faUtensils} from "@fortawesome/free-solid-svg-icons";
 export class FavoritesComponent implements OnInit {
   favorites: House[] = [];
   favoriteCountries: { [key: string]: House[] } = {}
+  favoriteCountriesList: string[] = []
 
   constructor(private upbnbService: UpbnbService) {
   }
@@ -28,8 +29,10 @@ export class FavoritesComponent implements OnInit {
           //console.log("empty list",this.favoriteCountries[country])
         }
         this.favoriteCountries[country].push(house)
-        console.log("novo",this.favoriteCountries)
+        console.log("novo", this.favoriteCountries)
+        console.log(Object.keys(this.favoriteCountries))
       })
+      let favoriteCountriesList = Object.keys(this.favoriteCountries)
     })
   }
 }
