@@ -16,14 +16,14 @@
       display: flex;
       cursor: pointer;
       padding-bottom: 0;
+    }
 
-      fa-icon {
-        color: white;
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        padding: 6px;
-      }
+    fa-icon {
+      color: white;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      padding: 6px;
     }
   }
 
@@ -41,7 +41,7 @@
       }
     }
 
-    .house-rating{
+    .house-rating {
 
       span {
         display: block;
@@ -50,7 +50,6 @@
       }
     }
   }
-
 
   .house-host-time-price {
     p {
@@ -63,3 +62,13 @@
     }
   }
 }
+
+/*
+Attempt to create alternative display for favorites and catalog
+.favorite-houses{
+
+}
+
+.catalog-houses{
+
+}*/

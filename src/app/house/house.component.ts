@@ -22,6 +22,9 @@ export class HouseComponent {
   @Input() host_type?: string //? because it may "exist" or not, depending on the component House will be used in...
   @Input() time?: string //? idem
 
+  //Attempt to create alternative display for favorites and catalog
+  @Input() favoriteType?: boolean
+
   // Object created to "convert" a variable to a string
   host_types: any = {
     professional: "Anfitrião profissional",
