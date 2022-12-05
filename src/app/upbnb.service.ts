@@ -15,15 +15,15 @@ export class UpbnbService {
     return this.http.get<Houses>(SOURCE_URL + "/casas"); //<Houses> está a dizer que a informação que vem do URL tem o formato definido no interface Houses
   }
 
-  getSearchHouses(value: any){
+  getSearchHouses(value: any) {
     return this.http.get<Houses>(SOURCE_URL + "/casas?search=" + value)
   }
 
-  getCurrentReservations(){
+  getCurrentReservations() {
     return this.http.get<Reservations>(SOURCE_URL + "/casas/current");
   }
 
-  getPastReservations(){
+  getPastReservations() {
     return this.http.get<Reservations>(SOURCE_URL + "/casas/past");
   }
 
@@ -43,27 +43,30 @@ export class UpbnbService {
     return this.http.get<Reviews>(SOURCE_URL + "/casas/" + id + "/reviews")
   }
 
-  getFeatures(id:number) {
+  getFeatures(id: number) {
     return this.http.get<Features>(SOURCE_URL + "/casas/" + id + "/features")
   }
 
-  favorites: number[] = [];
+  //favorites: number[] = []
+  //LOCAL STORAGE - GET ITEM
+  favorites: number[] = JSON.parse(localStorage.getItem("ids") || "[]");
 
-  isFavorite(id:number){
+  isFavorite(id: number) {
     return this.favorites.includes(id)
   }
 
-  toggleFavorite(id:number){
-    // console.log("lista favs",this.favorites)
-    if (this.isFavorite(id)){
-      this.favorites.splice(this.favorites.indexOf(id),1)
+  toggleFavorite(id: number) {
+    if (this.isFavorite(id)) {
+      this.favorites.splice(this.favorites.indexOf(id), 1)
+      localStorage.setItem("ids", JSON.stringify(this.favorites))
     } else {
       this.favorites.push(id)
+      localStorage.setItem("ids", JSON.stringify(this.favorites))
     }
   }
 
-  getFavorites(){
-    // console.log("Aqui estão os favoritos",this.favorites)
+  getFavorites() {
+    console.log("Aqui estão os favoritos", this.favorites)
     return this.http.get<Houses>(SOURCE_URL + "/casas?ids=" + this.favorites.join())
   }
 
