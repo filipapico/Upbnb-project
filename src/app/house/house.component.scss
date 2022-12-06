@@ -1,68 +1,73 @@
 .container {
   margin: 12px;
 
-  .house-image {
-    position: relative;
+  .house {
+    .house-image {
+      position: relative;
 
-    div {
-      display: block;
-      background-size: cover;
-      width: 100%;
-      padding-bottom: 57%;
-      border-radius: 12px;
-    }
-
-    .icon-favorite {
-      display: flex;
-      cursor: pointer;
-      padding-bottom: 0;
-    }
-
-    fa-icon {
-      color: white;
-      position: absolute;
-      top: 2px;
-      right: 2px;
-      padding: 6px;
-    }
-  }
-
-  .favorite-houses{
-    background-color: red;
-  }
-
-  .house-location-rating {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    height: 40px;
-
-    .house-location {
-      width: 80%;
-
-      h4 {
-        font-weight: normal;
-      }
-    }
-
-    .house-rating {
-
-      span {
+      div {
         display: block;
-        font-size: 14px;
-        text-align: right;
+        background-size: cover;
+        width: 100%;
+        padding-bottom: 57%;
+        border-radius: 12px;
+        background-position: center;
+      }
+
+      .icon-favorite {
+        display: flex;
+        cursor: pointer;
+        padding-bottom: 0;
+      }
+
+      fa-icon {
+        color: white;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        padding: 6px;
+      }
+    }
+
+    .house-location-rating {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      height: 40px;
+
+      .house-location {
+        width: 80%;
+
+        h4 {
+          font-weight: normal;
+        }
+      }
+
+      .house-rating {
+
+        span {
+          display: block;
+          font-size: 14px;
+          text-align: right;
+        }
+      }
+    }
+
+    .house-host-time-price {
+      p {
+        margin-top: 6px;
+        margin-bottom: 6px;
+
+        &.host, &.time {
+          color: grey;
+        }
       }
     }
   }
 
-  .house-host-time-price {
-    p {
-      margin-top: 6px;
-      margin-bottom: 6px;
-
-      &.host, &.time {
-        color: grey;
-      }
-    }
+  // NOT WROKING
+  // Able to select it but not to style it properly...
+  // Namely trying to use display flex, to have 2 main columns/divs... :-/
+  .favorite-houses {
   }
 }
