@@ -12,8 +12,6 @@
     justify-content: center;
     position: absolute;
     bottom: -16px;
-    color: white;
-    background-color: #004F63;
     border-radius: 65px;
     width: 130px;
     height: 130px;
@@ -35,16 +33,4 @@
     transition-duration: 50ms;
     color: white;
   }
-
-  /* OLD - ngClass attempt (not being used any longer)
-
-  div.catalog-blue, div.favorites-blue {
-    background-color: #004F63;
-    color: white;
-  }
-
-  div.catalog-white, div.favorites-white {
-    background-color: white;
-    color: #004F63;
-  }*/
 }
