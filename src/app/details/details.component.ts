@@ -65,7 +65,7 @@ export class DetailsComponent {
     })
 
     this.upbnbService.getHost(this.id).subscribe((host) => {
-      this.host = <Host>host;
+      this.host = host;
     })
 
     this.upbnbService.getPhotos(this.id-1).subscribe((photos: Photos) => {

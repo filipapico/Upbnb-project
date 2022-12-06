@@ -17,7 +17,7 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit(): void {
     this.upbnbService.getHouses().subscribe((houses) => {
-      this.houses = <House[]>houses.data;
+      this.houses = houses.data;
     })
 
   }
@@ -25,7 +25,7 @@ export class CatalogComponent implements OnInit {
   changeValue(e: any) {
     const value = e.target.value;
     this.upbnbService.getSearchHouses(value).subscribe((searchHouses)=>{
-      this.houses = <House[]>searchHouses.data;
+      this.houses = searchHouses.data;
     })
 
   }
