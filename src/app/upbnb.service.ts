@@ -15,8 +15,8 @@ export class UpbnbService {
     return this.http.get<Houses>(SOURCE_URL + "/casas"); //<Houses> está a dizer que a informação que vem do URL tem o formato definido no interface Houses
   }
 
-  getSearchHouses(value: any) {
-    return this.http.get<Houses>(SOURCE_URL + "/casas?search=" + value)
+  getSearchHouses(value: any, pageNumber: number) {
+    return this.http.get<Houses>(SOURCE_URL + "/casas?page=" + pageNumber + "&search=" + value)
   }
 
   getCurrentReservations() {
