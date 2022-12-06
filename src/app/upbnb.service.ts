@@ -56,11 +56,11 @@ export class UpbnbService {
   toggleFavorite(id: number) {
     if (this.isFavorite(id)) {
       this.favorites.splice(this.favorites.indexOf(id), 1)
-      localStorage.setItem("ids", JSON.stringify(this.favorites))
     } else {
       this.favorites.push(id)
-      localStorage.setItem("ids", JSON.stringify(this.favorites))
     }
+
+    localStorage.setItem("ids", JSON.stringify(this.favorites))
   }
 
   getFavorites() {
