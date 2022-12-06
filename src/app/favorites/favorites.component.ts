@@ -12,9 +12,6 @@ export class FavoritesComponent implements OnInit {
   favoriteCountries: { [key: string]: House[] } = {}
   favoriteCountriesList: string[] = []
 
-  //Attempt to create alternative display for favorites and catalog
-  favoriteType = true
-
   constructor(private upbnbService: UpbnbService) {
   }
 

@@ -1,6 +1,6 @@
 <div class="container" [routerLink]="['/details', id]">
   <div class="house">
-    <div class="house-image">
+    <div class="house-image" [ngClass]="favoriteType">
       <div style="background-image: url('{{featured_photo}}');"></div>
       <!--<img src="{{featured_photo}}" alt=""/>-->
       <div class="icon-favorite" (click)="$event.stopPropagation(); upbnbService.toggleFavorite(id)">

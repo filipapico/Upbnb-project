@@ -3,6 +3,7 @@ import {UpbnbService} from "../upbnb.service";
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {faHeart as faHeartSolid} from "@fortawesome/free-solid-svg-icons";
 import {ActivatedRoute} from "@angular/router";
+import * as stream from "stream";
 
 @Component({
   selector: 'app-house',
@@ -23,12 +24,12 @@ export class HouseComponent {
   @Input() time?: string //? idem
 
   //Attempt to create alternative display for favorites and catalog
-  @Input() favoriteType?: boolean
+  @Input() favoriteType?: string
 
   // Object created to "convert" a variable to a string
   host_types: any = {
     professional: "Anfitrião profissional",
-    individual: "Anfitrião individual"
+    individual: "Anfitrião individual",
   }
 
   constructor(public upbnbService: UpbnbService, private route: ActivatedRoute) {
