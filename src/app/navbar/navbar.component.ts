@@ -13,12 +13,11 @@ export class NavbarComponent {
   faHouse = faHouse;
   faHeart = faHeart;
 
+  /*OLD ngClass note being used any longer
   toggle = true;
-  //status = "Enable";
-
-
   enableDisableColours() {
     this.toggle = !this.toggle;
     //this.status = this.toggle ? "Enable" : "Disable"
-  }
+  }*/
+
 }

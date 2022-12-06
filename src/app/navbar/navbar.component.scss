@@ -30,11 +30,13 @@
     }
   }
 
-  div.search-icon:hover, div.heart-icon:hover {
+  div.search-icon:hover, div.heart-icon:hover, div.active {
     background-color: #004F63;
     transition-duration: 50ms;
     color: white;
   }
+
+  /* OLD - ngClass attempt (not being used any longer)
 
   div.catalog-blue, div.favorites-blue {
     background-color: #004F63;
@@ -44,5 +46,5 @@
   div.catalog-white, div.favorites-white {
     background-color: white;
     color: #004F63;
-  }
+  }*/
 }
