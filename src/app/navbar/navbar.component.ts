@@ -14,10 +14,11 @@ export class NavbarComponent {
   faHeart = faHeart;
 
   toggle = true;
-  status = "Enable";
+  //status = "Enable";
+
 
   enableDisableColours() {
     this.toggle = !this.toggle;
-    this.status = this.toggle ? "Enable" : "Disable"
+    //this.status = this.toggle ? "Enable" : "Disable"
   }
 }
