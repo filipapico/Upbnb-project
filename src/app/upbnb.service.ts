@@ -19,6 +19,10 @@ export class UpbnbService {
     return this.http.get<Houses>(SOURCE_URL + "/casas?page=" + pageNumber + "&search=" + value)
   }
 
+  getMorePages(pageNumber: number) {
+    return this.http.get<Houses>(SOURCE_URL + "/casas?page=" + pageNumber)
+  }
+
   getCurrentReservations() {
     return this.http.get<Reservations>(SOURCE_URL + "/casas/current");
   }

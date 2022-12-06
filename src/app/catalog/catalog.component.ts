@@ -11,6 +11,7 @@ import {House} from "../interfaces";
 export class CatalogComponent implements OnInit {
   houses: House[] = [];
   searchHouses: House[] = [];
+  pageNumber: number = 2
 
   constructor(private upbnbService: UpbnbService) {
   }
@@ -19,15 +20,22 @@ export class CatalogComponent implements OnInit {
     this.upbnbService.getHouses().subscribe((houses) => {
       this.houses = houses.data;
     })
+  }
+
+  changePage(pageNumber: number) {
+    if (this.pageNumber < 8) {
+      this.upbnbService.getMorePages(this.pageNumber).subscribe((searchHouses) => {
+        this.houses = searchHouses.data;
+      })
+      this.pageNumber++;
+    }
 
   }
 
   changeValue(e: any) {
     const value = e.target.value;
-    this.upbnbService.getSearchHouses(value).subscribe((searchHouses)=>{
+    this.upbnbService.getSearchHouses(value, this.pageNumber).subscribe((searchHouses) => {
       this.houses = searchHouses.data;
     })
-
   }
-
 }
