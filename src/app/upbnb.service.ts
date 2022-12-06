@@ -47,8 +47,6 @@ export class UpbnbService {
     return this.http.get<Features>(SOURCE_URL + "/casas/" + id + "/features")
   }
 
-  //favorites: number[] = []
-  //LOCAL STORAGE - GET ITEM
   favorites: number[] = JSON.parse(localStorage.getItem("ids") || "[]");
 
   isFavorite(id: number) {
@@ -66,8 +64,7 @@ export class UpbnbService {
   }
 
   getFavorites() {
-    console.log("Aqui estão os favoritos", this.favorites)
+    //console.log("Aqui estão os favoritos", this.favorites)
     return this.http.get<Houses>(SOURCE_URL + "/casas?ids=" + this.favorites.join())
   }
-
 }
