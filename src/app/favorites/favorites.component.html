@@ -3,7 +3,7 @@
   <div *ngIf="favorites">
     <div *ngFor="let fcl of favoriteCountriesList">
       <h2>{{fcl}}</h2>
-      <app-house [ngClass]="{'favorite-houses' : favoriteType, 'catalog-houses': !favoriteType}"
+      <app-house [ngClass]="{'favorite-houses' : favoriteType}"
                  *ngFor="let f of favoriteCountries[fcl]"
                  [featured_photo]="f.featured_photo"
                  [city]="f.city"
