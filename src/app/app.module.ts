@@ -10,7 +10,6 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { DetailsComponent } from './details/details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HouseComponent } from './house/house.component';
-import { TesteComponent } from './teste/teste.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 
@@ -23,7 +22,6 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     DetailsComponent,
     NavbarComponent,
     HouseComponent,
-    TesteComponent
   ],
   imports: [
     BrowserModule,
