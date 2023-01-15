@@ -49,6 +49,7 @@ export class DetailsComponent {
 
   constructor(public route: ActivatedRoute, public upbnbService: UpbnbService) {
     this.id = route.snapshot.params['id_casa']
+    console.log("id",this.id)
   }
 
   ngOnInit(): void {
@@ -60,8 +61,8 @@ export class DetailsComponent {
 
     this.upbnbService.getFeatures(this.id).subscribe((features) => {
       this.features = features.features
-      console.log("features", this.features)
-      console.log("all features", this.allfeatures)
+      //console.log("features", this.features)
+      //console.log("all features", this.allfeatures)
     })
 
     this.upbnbService.getHost(this.id).subscribe((host) => {
