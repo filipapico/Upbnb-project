@@ -1,6 +1,7 @@
 <div class="container">
   <div class="catalog-search">
-    <input type="text" class="search" (change)="changeValue($event)" name="search" placeholder="Procurar 🔍" autofocus>
+    <input type="text" class="search" (change)="changeValue($event)" name="search" placeholder="Procurar por país 🔍"
+           autofocus>
   </div>
   <div class="catalog-houses">
     <app-house *ngFor="let h of houses"
@@ -13,8 +14,14 @@
                [id]="h.id"
     >
     </app-house>
-    <div>
-      <a class="page-link" (click)="changePage(pageNumber)">...mais resultados</a>
-    </div>
   </div>
+
+  <div class="page-link">
+    <a (click)="changePage(pageNumber)">...mais resultados</a>
+  </div>
+
+  <div class="footer">
+    <a href="https://github.com/filipapico/Upbnb-project">Filipa Pico</a>
+  </div>
+
 </div>
